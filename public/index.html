@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Learning Management System</h1>
+        <p>Manage your courses, lessons, students and enrollments.</p>
+    </header>
+
+    <main class="container">
+        <h2>Dashboard</h2>
+
+        <section class="dashboard">
+            <div class="card">
+                <h3>Courses</h3>
+                <p>Manage your learning courses.</p>
+                <button onclick="showSection('courses')">View Courses</button>
+                <button onclick="showForm('courses')">Add Course</button>
+            </div>
+
+            <div class="card">
+                <h3>Lessons</h3>
+                <p>Manage lessons for each course.</p>
+                <button onclick="showSection('lessons')">View Lessons</button>
+                <button onclick="showForm('lessons')">Add Lesson</button>
+            </div>
+
+            <div class="card">
+                <h3>Students</h3>
+                <p>Manage registered students.</p>
+                <button onclick="showSection('students')">View Students</button>
+                <button onclick="showForm('students')">Add Student</button>
+            </div>
+
+            <div class="card">
+                <h3>Enrollments</h3>
+                <p>Manage student course enrollments.</p>
+                <button onclick="showSection('enrollments')">View Enrollments</button>
+                <button onclick="showForm('enrollments')">Enroll Student</button>
+            </div>
+        </section>
+
+        <section id="content" aria-live="polite">
+            <h2>Welcome!</h2>
+            <p>Select a module above to get started.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

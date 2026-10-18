@@ -1,0 +1,283 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #222;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #243b55;
+    color: white;
+    padding: 30px 40px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #dbe5f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.container > h2 {
+    margin-bottom: 20px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #243b55;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #2878d0;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 3px 4px 3px 0;
+}
+
+button:hover {
+    background-color: #185ca5;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.secondary-button {
+    background-color: #64748b;
+}
+
+.secondary-button:hover {
+    background-color: #475569;
+}
+
+.edit-button {
+    background-color: #0f766e;
+}
+
+.edit-button:hover {
+    background-color: #115e59;
+}
+
+.delete-button {
+    background-color: #dc2626;
+}
+
+.delete-button:hover {
+    background-color: #b91c1c;
+}
+
+#content {
+    background-color: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#content h2 {
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+thead {
+    background-color: #243b55;
+    color: white;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+td {
+    overflow-wrap: anywhere;
+}
+
+.id-cell {
+    min-width: 180px;
+    font-size: 12px;
+}
+
+.actions-cell {
+    min-width: 190px;
+    white-space: nowrap;
+}
+
+.actions-cell button {
+    margin-bottom: 5px;
+}
+
+.actions-cell select {
+    display: block;
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 7px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    background-color: white;
+    font: inherit;
+}
+
+#courseForm,
+#studentForm,
+#lessonForm,
+#enrollmentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#courseForm label,
+#studentForm label,
+#lessonForm label,
+#enrollmentForm label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+#courseForm input,
+#courseForm textarea,
+#studentForm input,
+#lessonForm input,
+#lessonForm textarea,
+#lessonForm select,
+#enrollmentForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font: inherit;
+    background-color: white;
+}
+
+#courseForm textarea,
+#lessonForm textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#courseForm input:focus,
+#courseForm textarea:focus,
+#studentForm input:focus,
+#lessonForm input:focus,
+#lessonForm textarea:focus,
+#lessonForm select:focus,
+#enrollmentForm select:focus {
+    outline: 2px solid #2878d0;
+    border-color: #2878d0;
+}
+
+.form-actions {
+    margin-top: 10px;
+}
+
+#courseMessage,
+#studentMessage,
+#lessonMessage,
+#enrollmentMessage {
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #b91c1c;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 25px 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    #content {
+        padding: 18px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .actions-cell {
+        min-width: 160px;
+    }
+}
